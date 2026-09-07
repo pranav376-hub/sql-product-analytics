@@ -373,22 +373,15 @@ The full case study is already maintained separately in **Notion** as required b
 Replace the placeholder below with your **public Notion URL**:
 
 > **B2C vs B2B: How Funnels and Retention Actually Differ**  
-> [`PASTE_PUBLIC_NOTION_URL_HERE`](https://app.notion.com/p/Task-2-Product-Analytics-3d436a824e5b80f1906ecc900d01c503?source=copy_link)
-
-Once pasted, make it clickable like this:
-
-```markdown
-[🔗 Read the full case study](https://your-public-notion-url-here)
-```
-
+> [`https://app.notion.com/p/Task-2-Product-Analytics-3d436a824e5b80f1906ecc900d01c503?source=copy_link`]
 ---
 
 <div align="center">
 
-## 🎯 SQL → Evidence → Business Meaning → Action
+--- 
 
 **Pranava Sharma K**  
-Data Analytics · SQL · Product Analytics · Business Intelligence
+Data Analytics · SQL · Product Analytics 
 
 [LinkedIn](https://www.linkedin.com/in/pranava-sharma/)
 

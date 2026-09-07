@@ -709,7 +709,7 @@ events
 
 ---
 
-# 11. Day 1 Key Learnings
+# 11. Key Learnings
 
 The SaaS schema differs from the ecommerce schema because the central commercial entity is an **account**, while product usage still happens through individual users.
 
@@ -733,36 +733,5 @@ events
 → product behavior
 ```
 
-These differences determine which source should be used for each product or revenue metric later in Task 2.
-
+These differences determine which source should be used for each product or revenue metric later 
 ---
-
-# 12. Day 1 Completion Checklist
-
-- [ ] Every current `saas` table inventoried
-- [ ] Approximate row counts recorded
-- [ ] Declared foreign keys inspected
-- [ ] Six probe questions answered
-- [ ] Subscription split-grain verified
-- [ ] MRR storage understood
-- [ ] Subscription statuses listed with counts
-- [ ] Trial vs paid mechanism verified
-- [ ] Timezone documented
-- [ ] Soft-delete pattern checked
-- [ ] At least three data-quality findings verified
-- [ ] `subscription_events` documented
-- [ ] `payment_attempts` documented
-- [ ] Experiment tables documented
-- [ ] Three required sample queries executed
-- [ ] ER diagram included and checked against actual schema
-- [ ] No fabricated counts or percentages remain
-- [ ] File saved as `notes/saas_schema.md`
-
----
-
-## Day 1 Status
-
-**Status:** `[COMPLETE / IN PROGRESS]`
-
-**Checkpoint note:**  
-Day 1 SaaS schema reconnaissance completed. I verified the account/user/subscription grains, mapped the key relationships, investigated MRR storage and subscription lifecycle behavior, documented data-quality risks, and created the SaaS schema dictionary before starting the product-analytics queries.
