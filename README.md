@@ -366,19 +366,13 @@ sql-product-analytics/
 
 # 📖 Portfolio Case Study
 
-The full case study is already maintained separately in **Notion** as required by the assignment. This repository intentionally stores **only the link**, not a second copy of the article.
+> **B2C vs B2B: How Funnels and Retention Actually Differ** 
 
-### 🔗 Where to paste the link
+[🔗 Read the full case study](https://app.notion.com/p/Task-2-Product-Analytics-3d436a824e5b80f1906ecc900d01c503?source=copy_link)
 
-Replace the placeholder below with your **public Notion URL**:
-
-> **B2C vs B2B: How Funnels and Retention Actually Differ**  
-> [`https://app.notion.com/p/Task-2-Product-Analytics-3d436a824e5b80f1906ecc900d01c503?source=copy_link`]
 ---
 
 <div align="center">
-
---- 
 
 **Pranava Sharma K**  
 Data Analytics · SQL · Product Analytics 
