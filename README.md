@@ -70,12 +70,6 @@ The project follows one repeatable workflow:
           ↓
 ┌────────────────────┐
 │ 5. DECIDE          │  Interpretation → PM action → next question
-└────────────────────┘
-```
-
-### 🔑 The senior-analyst principle
-
-**A SQL query is not finished when it returns rows. It is finished when the number is defensible and someone knows what decision it should influence.**
 
 ---
 
@@ -92,8 +86,6 @@ The project follows one repeatable workflow:
 | **Typical problem** | Funnel leakage / cart abandonment | Churn / contraction / weak conversion |
 | **Expansion** | Repeat purchase / basket growth | Seats / plan upgrades / add-ons |
 | **Decision owners** | Product · Growth · Marketing | Product · Finance · CS · Sales |
-
-> **Interview takeaway:** the transferable skill is not memorising a metric. It is recognising **which entity owns the metric and what business decision the metric supports**.
 
 ---
 
