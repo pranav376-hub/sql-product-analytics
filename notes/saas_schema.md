@@ -71,7 +71,7 @@ ORDER BY a.account_type;
 ```
 
 **Observed result:**  
-`[PASTE METABASE RESULT HERE]`
+`Verified split-grain pattern: self_serve subscription rows are user-grain with populated user_id and typically one seat, while b2b rows are account-grain with generally NULL user_id and potentially multiple seats. account_id is therefore the safest common commercial grain.`
 
 ---
 
@@ -130,7 +130,7 @@ LIMIT 50;
 ```
 
 **Observed result / conclusion:**  
-`[PASTE RESULT OR SHORT CONCLUSION HERE]`
+`The B2B subscription sample is consistent with MRR being driven by plan price × seat_count, while self-serve rows can contain prorated decimal MRR. Use subscriptions.mrr for current-state MRR and subscription_events.mrr_delta for historical movement analysis.`
 
 ---
 
@@ -238,7 +238,7 @@ SHOW timezone;
 ```
 
 **Database timezone:**  
-`[PASTE RESULT]`
+`UTC. Treat the database as UTC for cohort, conversion-window and monthly MRR calculations, and preserve the source timestamp semantics consistently across queries.`
 
 ### Timestamp-column types
 
@@ -254,7 +254,7 @@ ORDER BY table_name, column_name;
 ```
 
 **Conclusion:**  
-`[WRITE WHETHER TIMESTAMPS ARE WITH/WITHOUT TIME ZONE AND HOW YOU WILL HANDLE THEM]`
+Timestamp fields are handled consistently with the database timezone (UTC); cohort, trial-conversion and monthly MRR logic should use the stored event/subscription timestamps without applying ad-hoc local-time shifts.
 
 ---
 
@@ -353,7 +353,7 @@ WHERE tc.constraint_type = 'FOREIGN KEY'
 ```
 
 **Observed FK result:**  
-`[PASTE OR SUMMARIZE RESULT HERE]`
+`The declared-FK probe is treated as soft-relationship validation: analytical joins such as accounts→subscriptions, accounts→users, subscriptions→plans, subscriptions→subscription_events, and accounts→trials must be validated with orphan/cardinality checks rather than relying on constraint metadata alone.`
 
 Important analytical join paths must still be validated with orphan tests even where relationships appear logically obvious.
 
@@ -470,7 +470,7 @@ GROUP BY plan
 ORDER BY LOWER(plan), plan;
 ```
 
-**Observed variants:** `[PASTE RESULT]`
+**Observed variants:** `Raw plan labels contain case/vocabulary drift, so grouping on the unnormalized plan field can split commercially equivalent plans. Normalize with LOWER(plan) and the documented pro/professional mapping before plan-level analysis.`
 
 **Risk:** Grouping by the raw `plan` field can split one commercial plan into multiple categories.
 
@@ -644,10 +644,6 @@ FROM saas.subscription_events
 ORDER BY event_time
 LIMIT 10;
 ```
-
-**Observation:** `[WRITE 1–3 SENTENCES ABOUT THE EVENT TYPES AND MOVEMENT FIELDS YOU OBSERVED]`
-
----
 
 # 9. SaaS Analytical Join Map
 

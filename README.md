@@ -124,6 +124,8 @@ The project follows one repeatable workflow:
 
 [`queries/ecom/e1_activation_curve.sql`](queries/ecom/e1_activation_curve.sql)
 
+![E1 Activation Curve](images/e1_activation_curve.png)
+
 ### E2 — Checkout Funnel
 
 **Question:** Where is checkout leaking, and is the leak the same across paid social vs organic search?
@@ -142,6 +144,8 @@ The project follows one repeatable workflow:
 
 [`queries/ecom/e3_weekly_cohort_retention.sql`](queries/ecom/e3_weekly_cohort_retention.sql)
 
+![E3 Weekly Behavioural Retention](images/e3_weekly_retention.png)
+
 ### E4 — PDP Engagement
 
 **Question:** Which products attract eyeballs but fail to generate cart additions?
@@ -150,6 +154,8 @@ The project follows one repeatable workflow:
 
 [`queries/ecom/e4_pdp_engagement.sql`](queries/ecom/e4_pdp_engagement.sql)
 
+![E4 PDP Engagement](images/e4_pdp_engagement.png)
+
 ### E5 — Cart Abandonment
 
 **Question:** Is abandonment equally painful at ₹500 and ₹15,000 cart values?
@@ -157,6 +163,8 @@ The project follows one repeatable workflow:
 **Key technique:** Builds the cart at **session grain** first, then converts abandonment into estimated GMV leakage.
 
 [`queries/ecom/e5_cart_abandonment.sql`](queries/ecom/e5_cart_abandonment.sql)
+
+![E5 Cart Abandonment](images/e5_cart_abandonment.png)
 
 ---
 
@@ -180,7 +188,7 @@ The project follows one repeatable workflow:
 
 [`queries/saas/s2_trial_to_paid.sql`](queries/saas/s2_trial_to_paid.sql)
 
-![S2 Trial Conversion](images/s2_trial_conversion.png)
+![S2 Trial-to-Paid](images/s2_trial_conversion.png)
 
 ### S3 — GRR / NRR
 
@@ -190,7 +198,7 @@ The project follows one repeatable workflow:
 
 [`queries/saas/s3_grr_nrr.sql`](queries/saas/s3_grr_nrr.sql)
 
-![S3 GRR and NRR](images/s3_grr_nrr.png)
+![S3 GRR / NRR](images/s3_grr_nrr.png)
 
 ### S4 — Feature Adoption vs Retention
 
@@ -199,6 +207,8 @@ The project follows one repeatable workflow:
 **Key technique:** Adoption is evaluated using the `feature_id` relationship and the analysis explicitly acknowledges selection bias.
 
 [`queries/saas/s4_feature_adoption.sql`](queries/saas/s4_feature_adoption.sql)
+
+![S4 Feature Adoption](images/s4_feature_adoption.png)
 
 ### S5 — Expansion Revenue
 
@@ -261,11 +271,16 @@ See [`notes/saas_schema.md`](notes/saas_schema.md) for the full onboarding dicti
 |---|---|---|---|
 | `ecom_er_diagram.png` | E-commerce schema diagram | Data Model | Shows schema fluency + relationship thinking |
 | `saas_er_diagram.png` | SaaS schema diagram | Data Model | Shows account/user/subscription structure |
-| `e2_checkout_funnel.png` | Metabase result for E2 | E-commerce section / case study | Visually proves funnel reasoning |
-| `s2_trial_conversion.png` | Metabase result for S2 | SaaS section / case study | Shows trial-to-paid cohort conversion |
-| `s1_mrr_movements.png` | Metabase result for S1 | SaaS section / case study | Demonstrates commercial/revenue analytics |
-| `s3_grr_nrr.png` | Metabase result for S3 | SaaS section / case study | Shows B2B retention math |
-| `s5_expansion_revenue.png` | Metabase result for S5 | SaaS section / case study | Shows revenue-growth diagnosis |
+| `e1_activation_curve.png` | Metabase result for E1 | E1 section | Shows cohort activation rate and speed |
+| `e2_checkout_funnel.png` | Metabase result for E2 | E2 section | Shows checkout funnel progression |
+| `e3_weekly_retention.png` | Metabase result for E3 | E3 section | Shows relative-week behavioural retention |
+| `e4_pdp_engagement.png` | Metabase result for E4 | E4 section | Shows high-view, below-median PDP performance |
+| `e5_cart_abandonment.png` | Metabase result for E5 | E5 section | Shows abandonment rate vs GMV impact |
+| `s1_mrr_movements.png` | Metabase result for S1 | S1 section | Demonstrates commercial/revenue analytics |
+| `s2_trial_conversion.png` | Metabase result for S2 | S2 section | Shows trial-to-paid cohort conversion |
+| `s3_grr_nrr.png` | Metabase result for S3 | S3 section | Shows B2B retention math |
+| `s4_feature_adoption.png` | Metabase result for S4 | S4 section | Shows feature adoption vs retention |
+| `s5_expansion_revenue.png` | Metabase result for S5 | S5 section | Shows revenue-growth diagnosis |
 
 
 The exact image checklist and recommended capture order are documented in [`images/README.md`](images/README.md).
@@ -338,7 +353,7 @@ sql-product-analytics/
 │   ├── ecom_er_diagram.png
 │   ├── saas_er_diagram.png
 │   ├── e2_checkout_funnel.png
-│   ├── s2_trial_conversion.png
+│   ├── e3_weekly_retention.png
 │   ├── s1_mrr_movements.png
 │   ├── s3_grr_nrr.png
 │   └── s5_expansion_revenue.png
