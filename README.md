@@ -70,8 +70,8 @@ The project follows one repeatable workflow:
           ↓
 ┌────────────────────┐
 │ 5. DECIDE          │  Interpretation → PM action → next question
-
----
+└────────────────────┘
+```
 
 # 🆚 B2C vs B2B — The Core Comparison
 
@@ -257,6 +257,8 @@ See [`notes/saas_schema.md`](notes/saas_schema.md) for the full onboarding dicti
 
 # 🖼️ Visual Evidence
 
+This folder should contain **real portfolio evidence**, not generic decorative screenshots.
+
 ### Recommended image set
 
 | Filename | What to capture | Where it is used in the README | Why it matters |
@@ -274,6 +276,11 @@ See [`notes/saas_schema.md`](notes/saas_schema.md) for the full onboarding dicti
 | `s4_feature_adoption.png` | Metabase result for S4 | S4 section | Shows feature adoption vs retention |
 | `s5_expansion_revenue.png` | Metabase result for S5 | S5 section | Shows revenue-growth diagnosis |
 
+### 📌 Screenshot standard
+
+Capture the **Metabase query name + result table/chart + relevant filters/date window** in the same frame whenever possible. Keep text readable at repository width.
+
+Avoid screenshots that show only SQL text. The portfolio value is in the **result and the decision**, not merely proving that SQL was typed.
 
 The exact image checklist and recommended capture order are documented in [`images/README.md`](images/README.md).
 
@@ -339,15 +346,23 @@ PostgreSQL · Metabase · GitHub · Markdown · Notion
 sql-product-analytics/
 ├── README.md
 ├── INTERPRETATIONS.md
+├── .gitignore
 │
 ├── images/
 │   ├── README.md
 │   ├── ecom_er_diagram.png
 │   ├── saas_er_diagram.png
+│   │
+│   ├── e1_activation_curve.png
 │   ├── e2_checkout_funnel.png
 │   ├── e3_weekly_retention.png
+│   ├── e4_pdp_engagement.png
+│   └── e5_cart_abandonment.png
+│   │
 │   ├── s1_mrr_movements.png
+│   ├── s2_trial_conversion.png
 │   ├── s3_grr_nrr.png
+│   ├── s4_feature_adoption.png
 │   └── s5_expansion_revenue.png
 │
 ├── notes/
