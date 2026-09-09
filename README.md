@@ -257,8 +257,6 @@ See [`notes/saas_schema.md`](notes/saas_schema.md) for the full onboarding dicti
 
 # 🖼️ Visual Evidence
 
-This folder should contain **real portfolio evidence**, not generic decorative screenshots.
-
 ### Recommended image set
 
 | Filename | What to capture | Where it is used in the README | Why it matters |
@@ -276,11 +274,6 @@ This folder should contain **real portfolio evidence**, not generic decorative s
 | `s4_feature_adoption.png` | Metabase result for S4 | S4 section | Shows feature adoption vs retention |
 | `s5_expansion_revenue.png` | Metabase result for S5 | S5 section | Shows revenue-growth diagnosis |
 
-### 📌 Screenshot standard
-
-Capture the **Metabase query name + result table/chart + relevant filters/date window** in the same frame whenever possible. Keep text readable at repository width.
-
-Avoid screenshots that show only SQL text. The portfolio value is in the **result and the decision**, not merely proving that SQL was typed.
 
 The exact image checklist and recommended capture order are documented in [`images/README.md`](images/README.md).
 
