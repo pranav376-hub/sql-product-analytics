@@ -107,20 +107,4 @@ This folder is intentionally limited to **relevant portfolio evidence**. Do not 
 
 ---
 
-## ⭐ The 5 most important screenshots for job hunting
 
-If you only have time to capture five Metabase screenshots, use this order:
-
-1. **E2 — Checkout Funnel**
-2. **E3 — Cohort Retention**
-3. **S1 — MRR Movements**
-4. **S3 — GRR / NRR**
-5. **S5 — Expansion Revenue**
-
-These five tell the strongest portfolio story: **conversion → retention → recurring revenue → revenue retention → expansion**.
-
-## 📐 Screenshot quality standard
-
-Prefer a **16:9 or wide desktop crop** with readable text. Do not crop away the query title or the metric labels. Avoid browser chrome when possible.
-
-Use filenames exactly as listed above. The README is already wired to these paths so no further Markdown changes are required after the images are added.
