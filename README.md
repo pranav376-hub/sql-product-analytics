@@ -132,6 +132,8 @@ The project follows one repeatable workflow:
 
 [`queries/ecom/e2_checkout_funnel.sql`](queries/ecom/e2_checkout_funnel.sql)
 
+![E2 Checkout Funnel](images/e2_checkout_funnel.png)
+
 ### E3 — Cohort Retention
 
 **Question:** Of users who signed up in week W, what fraction came back and did something meaningful in W+1 through W+4?
@@ -168,6 +170,8 @@ The project follows one repeatable workflow:
 
 [`queries/saas/s1_mrr_movements.sql`](queries/saas/s1_mrr_movements.sql)
 
+![S1 MRR Movements](images/s1_mrr_movements.png)
+
 ### S2 — Trial-to-Paid Conversion
 
 **Question:** Of accounts that started a trial in week W, what fraction converted by day 14, 30 and 60?
@@ -176,6 +180,8 @@ The project follows one repeatable workflow:
 
 [`queries/saas/s2_trial_to_paid.sql`](queries/saas/s2_trial_to_paid.sql)
 
+![S2 Trial Conversion](images/s2_trial_conversion.png)
+
 ### S3 — GRR / NRR
 
 **Question:** Of the MRR from a monthly cohort, how much remains after 12 months, with and without expansion?
@@ -183,6 +189,8 @@ The project follows one repeatable workflow:
 **Key technique:** Revenue retention is analysed at account level, where **GRR cannot exceed 100%** but **NRR can** because expansion is included.
 
 [`queries/saas/s3_grr_nrr.sql`](queries/saas/s3_grr_nrr.sql)
+
+![S3 GRR and NRR](images/s3_grr_nrr.png)
 
 ### S4 — Feature Adoption vs Retention
 
@@ -256,7 +264,7 @@ This folder should contain **real portfolio evidence**, not generic decorative s
 | `ecom_er_diagram.png` | E-commerce schema diagram | Data Model | Shows schema fluency + relationship thinking |
 | `saas_er_diagram.png` | SaaS schema diagram | Data Model | Shows account/user/subscription structure |
 | `e2_checkout_funnel.png` | Metabase result for E2 | E-commerce section / case study | Visually proves funnel reasoning |
-| `e3_cohort_retention.png` | Metabase result for E3 | E-commerce section / case study | Shows cohort/retention analysis |
+| `s2_trial_conversion.png` | Metabase result for S2 | SaaS section / case study | Shows trial-to-paid cohort conversion |
 | `s1_mrr_movements.png` | Metabase result for S1 | SaaS section / case study | Demonstrates commercial/revenue analytics |
 | `s3_grr_nrr.png` | Metabase result for S3 | SaaS section / case study | Shows B2B retention math |
 | `s5_expansion_revenue.png` | Metabase result for S5 | SaaS section / case study | Shows revenue-growth diagnosis |
@@ -337,7 +345,7 @@ sql-product-analytics/
 │   ├── ecom_er_diagram.png
 │   ├── saas_er_diagram.png
 │   ├── e2_checkout_funnel.png
-│   ├── e3_cohort_retention.png
+│   ├── s2_trial_conversion.png
 │   ├── s1_mrr_movements.png
 │   ├── s3_grr_nrr.png
 │   └── s5_expansion_revenue.png

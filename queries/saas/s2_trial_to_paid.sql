@@ -8,7 +8,7 @@
 with first_trial as (
     select
         t.account_id
-      , min(t.trial_started_at) as trial_started_at
+      , min(t.started_at) as trial_started_at
     from saas.trials t
     group by 1
 )

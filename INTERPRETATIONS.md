@@ -15,9 +15,9 @@
 
 **Pattern choice:** Customer-level first meaningful event followed by cohort aggregation. This prevents multiple actions from turning one customer into multiple activation records.
 
-**Business interpretation:** `[LIVE RESULT — identify strongest/weakest mature cohort and activation-speed trend]`
+**Business interpretation:** [LIVE RESULT — identify strongest/weakest mature cohort and activation-speed trend]
 
-**PM Action:** `[LIVE RESULT — name the affected cohort and one testable onboarding/traffic/page-speed hypothesis]`
+**PM Action:** [LIVE RESULT — name the affected cohort and one testable onboarding/traffic/page-speed hypothesis]
 
 **Caveat:** The event stream starts on 2026-04-19. Earlier signups are uninstrumented rather than inactive; the newest 1–2 cohorts may also be censored.
 
@@ -27,9 +27,9 @@
 
 **Pattern choice:** `max(step_reached)` prevents funnel stages from exceeding previous stages.
 
-**Business interpretation:** `[LIVE RESULT — identify the worst step and channel differential]`
+**Business interpretation:** Checkout leakage is fairly consistent across channels: the address and shipping transitions each lose roughly 1–4% of sessions, while the cumulative checkout-to-purchase loss is about 13–15%. Organic has the largest absolute leakage because it has the highest checkout volume; affiliate has the highest initial address-step drop at 4.2%.
 
-**PM Action:** `[LIVE RESULT — assign the worst step to a session-recording / heatmap investigation]`
+**PM Action:** Use session recordings, payment/error logs and device/browser cuts to investigate the full checkout-to-purchase path, with an initial focus on affiliate traffic quality and any final-step payment friction.
 
 ### E3 — Weekly Behavioural Retention
 
@@ -37,9 +37,9 @@
 
 **Pattern choice:** Relative `week_index`, not calendar-week joins, to avoid off-by-one cohort errors.
 
-**Business interpretation:** `[LIVE RESULT — compare W1 vs W4 and identify whether the pattern is activation or habit formation]`
+**Business interpretation:** [LIVE RESULT — compare W1 vs W4 and identify whether the pattern is activation or habit formation]
 
-**PM Action:** `[LIVE RESULT — activation intervention if early retention is weak; habit/lifecycle intervention if later retention collapses]`
+**PM Action:** [LIVE RESULT — activation intervention if early retention is weak; habit/lifecycle intervention if later retention collapses]
 
 ### E4 — PDP Engagement
 
@@ -47,9 +47,9 @@
 
 **Pattern choice:** Category median is the benchmark; absolute ATC thresholds are not comparable across categories.
 
-**Business interpretation:** `[LIVE RESULT — name the highest-priority SKUs and their gap vs category median]`
+**Business interpretation:** [LIVE RESULT — name the highest-priority SKUs and their gap vs category median]
 
-**PM Action:** `[LIVE RESULT — assign price, image/content, or stock hypothesis to the top flagged SKUs]`
+**PM Action:** [LIVE RESULT — assign price, image/content, or stock hypothesis to the top flagged SKUs]
 
 ### E5 — Cart Abandonment
 
@@ -57,9 +57,9 @@
 
 **Pattern choice:** One row per ATC session before bucket aggregation makes the bucket totals additive.
 
-**Business interpretation:** `[LIVE RESULT — identify the bucket contributing the largest abandoned GMV]`
+**Business interpretation:** [LIVE RESULT — identify the bucket contributing the largest abandoned GMV]
 
-**PM Action:** `[LIVE RESULT — prioritise checkout reliability for high-value leakage or shipping-threshold work for low-value leakage]`
+**PM Action:** [LIVE RESULT — prioritise checkout reliability for high-value leakage or shipping-threshold work for low-value leakage]
 
 ---
 
@@ -71,9 +71,9 @@
 
 **Pattern choice:** Account-level commercial grain with one consistent historical cutoff. Trial starts are excluded from MRR movement math.
 
-**Business interpretation:** `[LIVE RESULT — largest positive and negative movement months and dominant bucket]`
+**Business interpretation:** November 2022 has the strongest net MRR increase at $2,698.50, driven mainly by $2,770.21 of new MRR plus $56.48 expansion. No displayed month has negative net MRR, but churn becomes materially larger late in the period, reaching -$571.81 in February 2023; January's -$515.38 churn is exactly offset by $515.38 of reactivation.
 
-**PM Action:** `[LIVE RESULT — cut the largest mover by account_type and plan]`
+**PM Action:** Segment the November growth and January–February churn by account_type and normalized plan to determine whether the movement is broad-based or concentrated in a specific customer segment.
 
 ### S2 — Trial-to-Paid Conversion
 
@@ -81,9 +81,9 @@
 
 **Pattern choice:** Separates trial population from paid conversion events so $0 trial state is never mistaken for paid revenue.
 
-**Business interpretation:** `[LIVE RESULT — identify the weakest mature cohort and conversion-speed pattern]`
+**Business interpretation:** The August 5, 2024 trial cohort is the weakest observed cohort at 25% conversion by day 14 (1 of 4 accounts), while the other displayed cohorts range from 33.3% to 100%. For converted trials, median time-to-paid is consistently about 9–14 days, suggesting the main issue is conversion incidence rather than a large delayed-conversion tail.
 
-**PM Action:** `[LIVE RESULT — qualify by source, plan, company size or country]`
+**PM Action:** Segment the August 5 cohort by acquisition source, trialed plan, company size and country to separate acquisition-quality effects from onboarding, product or pricing friction. Because the cohort contains only four trials, treat the result as a diagnostic signal rather than a statistically stable trend.
 
 ### S3 — GRR / NRR
 
@@ -91,9 +91,9 @@
 
 **Pattern choice:** Reconstructs historical account MRR rather than mixing current subscription snapshots and event deltas in one calculation.
 
-**Business interpretation:** `[LIVE RESULT — state mature GRR/NRR and whether retention or expansion is the stronger story]`
+**Business interpretation:** Among the mature cohorts shown, June 2022 is the strongest example with 100.0% GRR and 190.58% NRR, while October 2022 is the weakest at 54.07% GRR and 73.68% NRR. Strong cohorts can materially lift NRR through expansion, but the October cohort shows that expansion cannot compensate for weak gross retention when contraction and churn are large.
 
-**PM Action:** `[LIVE RESULT — retention programme when GRR is weak; customer-success / expansion investment when NRR is strongly above 100%]`
+**PM Action:** Compare the strong June/September cohorts with the weak October/November cohorts by account type, plan, seat changes and upgrade behaviour, then prioritize retention work where GRR is weak and replicate expansion motions where NRR is sustained above 100%.
 
 ### S4 — Feature Adoption vs 90-Day Retention
 
@@ -101,9 +101,9 @@
 
 **Pattern choice:** Feature usage is joined through `feature_id`, orphan users cannot be reliably attributed to accounts, and adoption is evaluated against a consistent eligible population.
 
-**Business interpretation:** `[LIVE RESULT — identify the feature with the strongest lift and group sizes]`
+**Business interpretation:** [LIVE RESULT — identify the feature with the strongest lift and group sizes]
 
-**PM Action:** `[LIVE RESULT — discoverability push only when the lift is credible; otherwise deepen with intent-matched analysis]`
+**PM Action:** [LIVE RESULT — discoverability push only when the lift is credible; otherwise deepen with intent-matched analysis]
 
 **Causal warning:** This is observational. Feature adopters may simply be more engaged.
 
@@ -113,9 +113,9 @@
 
 **Pattern choice:** Directly uses documented `event_type` vocabulary and signed `mrr_delta`, then aggregates at account grain.
 
-**Business interpretation:** `[LIVE RESULT — identify the dominant expansion vector and its share of total expansion MRR]`
+**Business interpretation:** Seat additions are the dominant expansion motion, generating $7,662.00 (53.7%) of total expansion MRR across 34 accounts. Plan upgrades contribute $6,348.80 (44.5%), while add-ons contribute only $261.80 (1.8%).
 
-**PM Action:** `[LIVE RESULT — seat-management UX, pricing-tier differentiation, or cross-sell discovery]`
+**PM Action:** Prioritize frictionless seat-management and self-serve seat-addition flows, with clear incremental pricing. Treat add-on cross-sell as a secondary opportunity until additional demand evidence supports investment.
 
 ---
 
